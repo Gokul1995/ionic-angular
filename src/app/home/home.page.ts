@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  text = 'Default Text';
+  expense = {};
+  expenseList = [];
   constructor() {}
 
+  onChangeText() {
+      this.text = 'Text has been changed';
+  }
+  addExpense(data) {
+    console.log('value : ', data);
+    this.expenseList.push(data);
+  }
 }
